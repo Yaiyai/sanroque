@@ -6,6 +6,10 @@
   --light-grey: #c1c1c1e6;
   --grey: #c1c1c1;
 }
+* {
+  padding: 0;
+  margin: 0;
+}
 //https://res.cloudinary.com/sanroque/image/upload/v1687890637/bkg1.png
 body {
   position: relative;
@@ -26,16 +30,16 @@ body {
     height: 100%;
     background-image: url("https://res.cloudinary.com/sanroque/image/upload/v1687890637/bkg1.png");
     background-position: top center;
-    background-size: cover;
+    background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
     opacity: 0.5;
     z-index: -1;
+    @media (max-width: 991px) {
+      background-size: cover;
+    }
   }
   &::-webkit-scrollbar {
     display: none;
   }
-}
-main {
-  padding: 0 20px;
 }
