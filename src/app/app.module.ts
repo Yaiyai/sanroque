@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ApiMenuService } from './communication/api-menu.service';
+import { FooterModule } from './_ui/footer/footer.module';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { ApiMenuService } from './communication/api-menu.service';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    FooterModule,
   ],
   providers: [ApiMenuService],
   bootstrap: [AppComponent]

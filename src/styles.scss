@@ -43,3 +43,14 @@ body {
     display: none;
   }
 }
+
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
