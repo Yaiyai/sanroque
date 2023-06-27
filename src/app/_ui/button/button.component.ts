@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-button',
@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./button.component.scss']
 })
 export class ButtonComponent {
-  public label: string = 'botton';
-  public class: 'main' | 'secondary' = 'main';
+  @Input() label: string = '';
+  @Input() class: 'main' | 'secondary' = 'main';
   constructor() { }
 
   ngOnInit() {

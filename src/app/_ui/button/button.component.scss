@@ -1,0 +1,26 @@
+button {
+  padding: 4px 16px;
+  border-radius: 50px;
+  font-family: "Saira Semi Condensed", sans-serif;
+
+  &.main {
+    background-color: var(--main);
+    border: none;
+    span {
+      color: white;
+    }
+  }
+  &.secondary {
+    background-color: transparent;
+    border: 1px solid var(--main);
+    span {
+      color: var(--main);
+    }
+  }
+  span {
+    text-transform: capitalize;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+  }
+}
