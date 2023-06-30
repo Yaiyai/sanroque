@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import { ButtonModule } from 'src/app/_ui/button/button.module';
 import { HomeRoutingModule } from './home-routing.module';
+import { FooterModule } from 'src/app/_ui/footer/footer.module';
 
 @NgModule({
     imports: [
         CommonModule,
         ButtonModule,
+        FooterModule,
     ],
     declarations: [
         HomeComponent

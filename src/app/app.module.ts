@@ -4,7 +4,6 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FooterModule } from './_ui/footer/footer.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +13,6 @@ import { FooterModule } from './_ui/footer/footer.module';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    FooterModule,
   ],
   bootstrap: [AppComponent]
 })
