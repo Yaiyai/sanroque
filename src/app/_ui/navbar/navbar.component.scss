@@ -3,11 +3,13 @@ nav {
   top: 0;
   left: 0;
   right: 0;
-  background-color: pink;
+  background-color: white;
+  display: flex;
+  padding: 24px 20px;
 }
 figure {
   width: 100px;
-  height: 100px;
+  aspect-ratio: 16/9;
   overflow: hidden;
   position: relative;
   img {

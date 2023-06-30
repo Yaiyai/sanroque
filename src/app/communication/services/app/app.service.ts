@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AppService {
-  isHome: boolean = false;
+  public isHome: boolean = false;
 
   constructor() { }
 
@@ -15,6 +15,5 @@ export class AppService {
   getIsHome() {
     return this.isHome;
   }
-
 
 }
