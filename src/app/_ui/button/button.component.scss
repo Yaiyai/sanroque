@@ -8,9 +8,10 @@ button {
     border: none;
     span {
       color: white;
+      font-weight: 600;
     }
   }
-  &.secondary {
+  &.outline {
     background-color: transparent;
     border: 1px solid var(--main);
     span {
