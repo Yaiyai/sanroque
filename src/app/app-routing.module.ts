@@ -1,16 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './components/home/home.component';
-import { MenuComponent } from './components/menu/menu.component';
-import { DaymenuComponent } from './components/daymenu/daymenu.component';
-import { ContactComponent } from './components/contact/contact.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'carta', component: MenuComponent },
-  { path: 'menu-del-dia', component: DaymenuComponent },
-  { path: 'contacto', component: ContactComponent },
-
+  { path: '', loadChildren: () => import('./components/home/home.module').then(m => m.HomeModule) },
+  { path: 'carta', loadChildren: () => import('./components/menu/menu.module').then(m => m.MenuModule) },
+  { path: 'menu-del-dia', loadChildren: () => import('./components/daymenu/daymenu.module').then(m => m.DaymenuModule) },
+  { path: 'contacto', loadChildren: () => import('./components/contact/contact.module').then(m => m.ContactModule) },
 ];
 
 @NgModule({

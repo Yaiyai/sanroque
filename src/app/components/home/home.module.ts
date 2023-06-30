@@ -2,17 +2,19 @@ import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA, NgModule } from '@angular/cor
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import { ButtonModule } from 'src/app/_ui/button/button.module';
+import { HomeRoutingModule } from './home-routing.module';
 
 @NgModule({
     imports: [
         CommonModule,
-        ButtonModule
+        ButtonModule,
     ],
     declarations: [
         HomeComponent
     ],
     exports: [
-        HomeComponent
+        HomeComponent,
+        HomeRoutingModule
     ],
     schemas: [
         CUSTOM_ELEMENTS_SCHEMA,
