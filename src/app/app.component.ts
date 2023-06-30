@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppService } from './communication/services/app/app.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Restaurante San Roque | Brañosera';
+
+  constructor(public appService: AppService) { }
 }

@@ -1,3 +1,5 @@
 <main>
+    <app-navbar *ngIf="!appService.getIsHome()"></app-navbar>
     <router-outlet></router-outlet>
+    <app-footer *ngIf="appService.getIsHome()"></app-footer>
 </main>
