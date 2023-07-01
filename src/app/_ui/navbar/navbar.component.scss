@@ -5,8 +5,25 @@ nav {
   right: 0;
   background-color: white;
   display: flex;
+  flex-direction: column;
   padding: 24px 20px;
+  border-bottom: 1px solid var(--main);
+  flex-wrap: wrap;
 }
+
+.fix {
+  margin-top: 24px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--main);
+}
+
 figure {
   width: 100px;
   aspect-ratio: 16/9;

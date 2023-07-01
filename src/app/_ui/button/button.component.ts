@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class ButtonComponent {
   @Input() label: string = '';
-  @Input() class: 'main' | 'outline' = 'main';
+  @Input() class: 'main' | 'outline' | 'go' | 'link' = 'main';
   constructor() { }
 
   ngOnInit() {

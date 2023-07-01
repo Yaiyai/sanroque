@@ -1,3 +1,6 @@
-<button [class]="class">
+<button [class]="class + ' my-button' ">
     <span>{{label}}</span>
+    <div *ngIf="class === 'go' " class="icon sm">
+        <i class="fa-solid fa-chevron-right"></i>
+    </div>
 </button>
