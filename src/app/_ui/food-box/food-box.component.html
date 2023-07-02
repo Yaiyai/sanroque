@@ -1,5 +1,12 @@
 <article class="food-box">
     <span class="dish">{{dish}}</span>
     <span class="description">{{description}}</span>
-    <span class="price">{{price}}€</span>
+    <div class="price-alergenos">
+        <div class="alergenos" *ngIf="alergenos.length > 0">
+            <figure *ngFor="let ale of alergenos" class="alergeno">
+                <img [src]="auxAler[ale]">
+            </figure>
+        </div>
+        <span class="price">{{price}}€</span>
+    </div>
 </article>

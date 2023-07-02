@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ApiMenuService } from 'src/app/communication/api-menu.service';
 import { AppService } from 'src/app/communication/services/app/app.service';
+import { Dish } from 'src/app/models/dish.model';
 
 @Component({
   selector: 'app-menu',
@@ -8,11 +9,13 @@ import { AppService } from 'src/app/communication/services/app/app.service';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent {
-  public dishes = [];
+  public dishes: Dish[] = [];
+
   constructor(
     private apiMenuService: ApiMenuService,
     private appService: AppService,
   ) { }
+
   ngOnInit() {
     this.appService.broadcast('titleNav', 'Carta');
     this.appService.broadcast('buttonNav', { label: 'Menú del día', link: '/menu-del-dia' });
@@ -29,5 +32,6 @@ export class MenuComponent {
     this.appService.broadcast('titleNav', '');
     this.appService.broadcast('buttonNav', { label: '', link: '' });
   }
+
 
 }

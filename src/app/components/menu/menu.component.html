@@ -1,3 +1,5 @@
-<div class="menu">
-    <app-food-box *ngFor="let dish of dishes"></app-food-box>
+<div class="menu" *ngIf="dishes.length > 0">
+    <ng-container *ngFor="let dish of dishes">
+        <app-food-box *ngIf="dish.active" [dish]="dish.dish" [alergenos]="dish.alergenos" [price]="dish.price" [description]="dish.description"></app-food-box>
+    </ng-container>
 </div>
