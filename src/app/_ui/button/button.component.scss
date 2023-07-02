@@ -11,6 +11,15 @@ button.my-button {
       font-weight: 600;
     }
   }
+  &.gray {
+    background-color: var(--grey);
+    border: none;
+    opacity: 0.5;
+    span {
+      color: var(--text);
+      font-weight: 300;
+    }
+  }
 
   &.outline {
     background-color: transparent;
@@ -38,5 +47,6 @@ button.my-button {
     font-size: 16px;
     line-height: 25px;
     text-align: center;
+    white-space: nowrap;
   }
 }
