@@ -61,6 +61,9 @@ export class MenuComponent {
     if (type === 'Ver todas') {
       this.isFilterOn = false;
     } else {
+      if (type === 'Vinos Tintos') {
+        type = 'Vinos';
+      }
       this.apiMenuService.filterDishes(type).subscribe({
         next: res => {
           this.isFilterOn = true;
