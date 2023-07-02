@@ -12,10 +12,12 @@ export class MenuComponent {
   public all: Dish[] = [];
   public filtered: Dish[] = [];
   public isFilterOn: boolean = false;
+  public activeFilter: string = 'Ver todas';
+  public categories: { order: number; name: string; }[] = [];
   public get dishes(): Dish[] {
     return this.isFilterOn ? this.filtered : this.all;
   }
-  public categories: { order: number; name: string; }[] = [];
+
   constructor(
     private apiMenuService: ApiMenuService,
     private appService: AppService,
@@ -32,7 +34,6 @@ export class MenuComponent {
       next: company => {
         this.categories = company.company[0].categories;
         this.categories.unshift({ order: 0, name: 'Ver todas' });
-        console.log(this.categories);
         this.getAllDishes();
       },
       error: err => console.error(err)
@@ -56,6 +57,7 @@ export class MenuComponent {
   }
 
   filter(type: string) {
+    this.activeFilter = type;
     if (type === 'Ver todas') {
       this.isFilterOn = false;
     } else {
@@ -68,6 +70,5 @@ export class MenuComponent {
       });
     }
   }
-
 
 }

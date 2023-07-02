@@ -1,5 +1,10 @@
-<div class="menu" *ngIf="dishes.length > 0">
-    <ng-container *ngFor="let dish of dishes">
-        <app-food-box *ngIf="dish.active" [dish]="dish.dish" [alergenos]="dish.alergenos" [price]="dish.price" [description]="dish.description"></app-food-box>
-    </ng-container>
+<div id="carta">
+    <div class="filter" *ngIf="categories.length > 0">
+        <app-button *ngFor="let cat of categories" [class]="activeFilter === cat.name ? 'main' : 'outline' " (click)="filter(cat.name)" [label]="cat.name"> </app-button>
+    </div>
+    <div class="menu" *ngIf="dishes.length > 0">
+        <ng-container *ngFor="let dish of dishes">
+            <app-food-box *ngIf="dish.active" [dish]="dish.dish" [alergenos]="dish.alergenos" [price]="dish.price" [description]="dish.description"></app-food-box>
+        </ng-container>
+    </div>
 </div>
