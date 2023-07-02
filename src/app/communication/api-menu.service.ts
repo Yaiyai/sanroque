@@ -7,10 +7,18 @@ import { catchError, map, retry } from 'rxjs/operators';
     providedIn: 'root'
 })
 export class ApiMenuService {
-    url = 'https://cms-back-sanroque.up.railway.app/api/';
+    url = 'https://cms-back-sanroque.up.railway.app/api';
     constructor(private http: HttpClient) { }
 
+    getCategories(): Observable<any> {
+        return this.http.get(`${this.url}/companies`);
+    }
+
     dishes(): Observable<any> {
-        return this.http.get(`${this.url}dish`);
+        return this.http.get(`${this.url}/dish`);
+    }
+
+    filterDishes(filterDish: string): Observable<any> {
+        return this.http.get(`${this.url}/dish/category/${filterDish}`);
     }
 }
