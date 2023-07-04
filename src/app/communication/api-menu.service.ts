@@ -18,6 +18,10 @@ export class ApiMenuService {
         return this.http.get(`${this.url}/dish`);
     }
 
+    getDayMenu(): Observable<any> {
+        return this.http.get(`${this.url}/daymenu`);
+    }
+
     filterDishes(filterDish: string): Observable<any> {
         return this.http.get(`${this.url}/dish/category/${filterDish}`);
     }

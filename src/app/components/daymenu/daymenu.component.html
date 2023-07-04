@@ -1,1 +1,14 @@
-<p>daymenu works!</p>
+<div id="daymenu">
+    <div class="daymenu">
+        <div class="food-group">
+            <p class="title">Primeros</p>
+            <div class="dishes" [innerHTML]="menu.firsts | safe:'html'"></div>
+        </div>
+        <div class="food-group">
+            <p class="title">Segundos</p>
+            <div class="dishes" [innerHTML]="menu.seconds | safe:'html'"></div>
+        </div>
+        <div class="acclaration">{{menu.acclaration}}</div>
+        <div class="price">{{menu.price}}€</div>
+    </div>
+</div>

@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarModule } from './_ui/navbar/navbar.module';
 import { FooterModule } from './_ui/footer/footer.module';
+import { PipesModule } from './pipes/pipes.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FooterModule } from './_ui/footer/footer.module';
     HttpClientModule,
     AppRoutingModule,
     NavbarModule,
-    FooterModule
+    FooterModule,
+    PipesModule
   ],
   bootstrap: [AppComponent]
 })

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ApiMenuService } from 'src/app/communication/api-menu.service';
 import { AppService } from 'src/app/communication/services/app/app.service';
+import { DayMenu } from 'src/app/models/dayMenu.model';
 
 @Component({
   selector: 'app-daymenu',
@@ -8,6 +9,7 @@ import { AppService } from 'src/app/communication/services/app/app.service';
   styleUrls: ['./daymenu.component.scss']
 })
 export class DaymenuComponent {
+  public menu: DayMenu = new DayMenu();
 
   constructor(
     private apiMenuService: ApiMenuService,
@@ -17,6 +19,13 @@ export class DaymenuComponent {
   ngOnInit() {
     this.appService.broadcast('titleNav', 'Menu del día');
     this.appService.broadcast('buttonNav', { label: 'Carta', link: '/carta' });
+    this.getMenu();
+  }
+
+  getMenu() {
+    this.apiMenuService.getDayMenu().subscribe({
+      next: menu => this.menu = menu.daymenus[0]
+    });
   }
 
   ngOnDestroy() {
