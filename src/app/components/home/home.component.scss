@@ -16,6 +16,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (min-width: 992px) {
+    max-width: 992px;
+    min-width: 992px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   h1 {
     color: var(--main);
