@@ -9,6 +9,7 @@ type MessageCallback = (payload: any) => void;
 export class AppService {
   private handler = new Subject<any>();
   public isHome: boolean = false;
+  public isContact: boolean = false;
 
   constructor() { }
 
@@ -18,6 +19,14 @@ export class AppService {
 
   getIsHome() {
     return this.isHome;
+  }
+
+  setIsContact(isContact: boolean) {
+    this.isContact = isContact;
+  }
+
+  getIsContact() {
+    return this.isContact;
   }
 
   broadcast(type: string, payload: any = null) {
