@@ -23,6 +23,11 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
+    @media (min-width: 992px) {
+      width: 20vw;
+      height: 40vh;
+      margin: auto;
+    }
     .back {
       position: absolute;
       top: 24px;
@@ -85,6 +90,9 @@
         margin-bottom: 6px;
         width: 100%;
         text-align: center;
+        @media (min-width: 9920x) {
+          width: fit-content;
+        }
       }
     }
   }

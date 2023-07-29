@@ -18,7 +18,6 @@ export class ContactComponent {
   ) {
     this.subscription.add(this.appService.subscribe('getCompany', (comp) => {
       this.company = comp;
-      console.log(this.company);
     }));
   }
 
