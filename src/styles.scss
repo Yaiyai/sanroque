@@ -65,6 +65,7 @@ button {
   align-items: center;
   justify-content: center;
   border-radius: 50px;
+  background-color: rgba($color: white, $alpha: 0.5);
   &.sm {
     width: 12px;
     min-width: 12px;

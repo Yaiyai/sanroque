@@ -1,0 +1,70 @@
+#contact-page {
+  display: flex;
+  height: 100%;
+  position: relative;
+  &::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-image: url("https://res.cloudinary.com/sanroque/image/upload/v1690626855/web/terraza.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top right;
+    filter: grayscale(100%);
+    z-index: 0;
+  }
+  .red {
+    position: relative;
+    padding: 24px;
+    background-color: var(--main);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    .icon {
+      position: absolute;
+      top: 24px;
+      left: 24px;
+    }
+    .title {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: auto;
+      margin-bottom: auto;
+      h1 {
+        color: white;
+        text-transform: uppercase;
+        font-size: 26px;
+        line-height: 41px;
+        font-weight: 300;
+      }
+      h2 {
+        color: white;
+        text-transform: uppercase;
+        font-size: 61px;
+        line-height: 52px;
+        font-weight: 700;
+      }
+    }
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto;
+      width: 100%;
+      small {
+        color: white;
+        font-size: 12px;
+        line-height: 19px;
+      }
+      app-button {
+        margin-bottom: 6px;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}

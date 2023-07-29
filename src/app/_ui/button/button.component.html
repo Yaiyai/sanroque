@@ -1,6 +1,16 @@
-<button [class]="class + ' my-button' ">
-    <span>{{label}}</span>
-    <div *ngIf="class === 'go' " class="icon sm">
-        <i class="fa-solid fa-chevron-right"></i>
-    </div>
-</button>
+<ng-container *ngIf="!isLink">
+    <button [class]="class + ' my-button' ">
+        <span>{{label}}</span>
+        <div *ngIf="class === 'go' " class="icon sm">
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+    </button>
+</ng-container>
+<ng-container *ngIf="isLink">
+    <a [class]="class + ' my-button' " [href]="link" target="_blank">
+        <span>{{label}}</span>
+        <div *ngIf="class === 'go' " class="icon sm">
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+    </a>
+</ng-container>

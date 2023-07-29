@@ -1,14 +1,27 @@
-button.my-button {
+:host {
+  width: 100%;
+}
+.my-button {
   cursor: pointer;
   padding: 4px 16px;
   border-radius: 50px;
   font-family: "Saira Semi Condensed", sans-serif;
+  display: block;
+  text-decoration: none;
 
   &.main {
     background-color: var(--main);
     border: none;
     span {
       color: white;
+      font-weight: 600;
+    }
+  }
+  &.white {
+    background-color: white;
+    border: none;
+    span {
+      color: var(--main);
       font-weight: 600;
     }
   }

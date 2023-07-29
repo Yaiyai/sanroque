@@ -7,7 +7,10 @@ import { Component, Input } from '@angular/core';
 })
 export class ButtonComponent {
   @Input() label: string = '';
-  @Input() class: 'main' | 'outline' | 'go' | 'link' | 'gray' = 'main';
+  @Input() class: 'main' | 'outline' | 'go' | 'link' | 'gray' | 'white' = 'main';
+  @Input() isLink: boolean = false;
+  @Input() link: string = '';
+
   constructor() { }
 
   ngOnInit() {

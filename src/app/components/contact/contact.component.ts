@@ -21,5 +21,8 @@ export class ContactComponent {
   ngOnDestroy() {
     this.appService.setIsContact(false);
   }
+  goHome() {
+    this.router.navigate(['/']);
+  }
 
 }

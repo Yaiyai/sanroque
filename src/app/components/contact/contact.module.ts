@@ -2,9 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ContactComponent } from './contact.component';
 import { ContactRoutingModule } from './contact-routing.module';
+import { ButtonModule } from 'src/app/_ui/button/button.module';
 @NgModule({
     imports: [
-        CommonModule
+        CommonModule,
+        ButtonModule,
     ],
     declarations: [ContactComponent],
     exports: [ContactComponent, ContactRoutingModule]
