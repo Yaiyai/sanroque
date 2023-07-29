@@ -1,15 +1,44 @@
 <section id="contact-page">
     <div class="red">
-        <div class="icon lg" (click)="goHome()">
+        <div class="icon back lg" (click)="goHome()">
             <i class="fa-solid fa-chevron-left"></i>
         </div>
-        <div class="title">
+        <div class="text">
             <h1>Restaurante</h1>
             <h2>San</h2>
             <h2>Roque</h2>
+            <div *ngIf="company" class="info">
+                <div class="each-info">
+                    <div class="icon lg only white">
+                        <i class="fa-brands fa-facebook"></i>
+                    </div>
+                    <p>Sanroquebranosera</p>
+                </div>
+                <div class="each-info">
+                    <div class="icon lg only white">
+                        <i class="fa-regular fa-clock"></i>
+                    </div>
+                    <p>10:00 - 22:00</p>
+                </div>
+                <div class="each-info">
+                    <div class="icon lg only white">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <p>{{company?.phone}}</p>
+                </div>
+                <div class="each-info">
+                    <div class="icon lg only white">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="fix">
+                        <p>{{company?.address.split('34829')[0]}}</p>
+                        <p>{{'34829 ' + company?.address.split('34829')[1]}}</p>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="buttons">
-            <app-button label="Llamar" class="white" link="tel:979607181" [isLink]="true"></app-button>
+            <app-button label="Llamar" class="white" [link]="'tel:'+ company?.phone" [isLink]="true"></app-button>
             <small>Diseño y desarrollo:</small>
             <small>MFi, S.L.</small>
         </div>

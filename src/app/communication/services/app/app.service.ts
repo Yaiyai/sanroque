@@ -10,8 +10,17 @@ export class AppService {
   private handler = new Subject<any>();
   public isHome: boolean = false;
   public isContact: boolean = false;
+  company: any;
 
   constructor() { }
+
+  setCompany(company: any) {
+    this.company = company;
+  }
+
+  getCompany() {
+    return this.company;
+  }
 
   setIsHome(isHome: boolean) {
     this.isHome = isHome;

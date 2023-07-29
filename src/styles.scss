@@ -109,6 +109,15 @@ button {
   svg {
     color: var(--main);
   }
+  &.white {
+    i,
+    svg {
+      color: white;
+    }
+  }
+  &.only {
+    background-color: transparent;
+  }
   &.bkg {
     background-color: var(--main);
     i,
