@@ -1,0 +1,10 @@
+# Group 1
+User-agent: Googlebot
+Disallow: /nogooglebot/
+
+# Group 2
+User-agent: *
+Allow: /
+
+Sitemap: https://www.sanroquebranosera.es/sitemap.xml
+Sitemap: https://sanroquebranosera.es/sitemap.xml

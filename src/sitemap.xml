@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+
+
+<url>
+  <loc>https://www.sanroquebranosera.es/</loc>
+  <lastmod>2023-08-04T07:59:30+00:00</lastmod>
+</url>
+<url>
+    <loc>https://www.sanroquebranosera.es/carta</loc>
+    <lastmod>2023-08-04T08:00:18+00:00</lastmod>
+</url>
+<url>
+    <loc>https://www.sanroquebranosera.es/vinos</loc>
+    <lastmod>2023-08-04T08:00:53+00:00</lastmod>
+</url>
+<url>
+    <loc>https://www.sanroquebranosera.es/menu-del-dia</loc>
+    <lastmod>2023-08-04T08:01:39+00:00</lastmod>
+</url>
+<url>
+    <loc>https://www.sanroquebranosera.es/contacto</loc>
+    <lastmod>2023-08-04T08:02:18+00:00</lastmod>
+</url>
+
+</urlset>
