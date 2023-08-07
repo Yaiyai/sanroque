@@ -25,8 +25,9 @@
     justify-content: space-between;
     @media (min-width: 992px) {
       width: 20vw;
-      height: 40vh;
+      min-height: 40vh;
       margin: auto;
+      padding-top: 48px;
     }
     .back {
       position: absolute;
@@ -75,12 +76,36 @@
         }
       }
     }
+    .logos {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 24px auto 12px;
+      width: 100%;
+      figure {
+        aspect-ratio: 16/9;
+        height: 70px;
+        overflow: hidden;
+        position: relative;
+        img {
+          position: absolute;
+          top: 0;
+          object-fit: contain;
+          object-position: center;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
     .buttons {
       display: flex;
       flex-direction: column;
       align-items: center;
       margin: 0 auto;
       width: 100%;
+      @media (min-width: 992px) {
+        margin-top: 12px;
+      }
       small {
         color: white;
         font-size: 12px;
@@ -90,6 +115,7 @@
         margin-bottom: 6px;
         width: 100%;
         text-align: center;
+        display: block;
         @media (min-width: 9920x) {
           width: fit-content;
         }
