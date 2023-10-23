@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { ApiMenuService } from 'src/app/communication/api-menu.service';
 import { AppService } from 'src/app/communication/services/app/app.service';
 import { DayMenu } from 'src/app/models/dayMenu.model';
@@ -14,6 +15,7 @@ export class DaymenuComponent {
   constructor(
     private apiMenuService: ApiMenuService,
     private appService: AppService,
+    private translate: TranslateService,
   ) { }
 
   ngOnInit() {
@@ -25,7 +27,13 @@ export class DaymenuComponent {
 
   getMenu() {
     this.apiMenuService.getDayMenu().subscribe({
-      next: menu => this.menu = menu.daymenus[0]
+      next: menu => {
+        if (this.translate.currentLang === 'es') {
+          this.menu = menu.daymenus[0];
+        } else {
+          this.menu = menu.daymenus[1];
+        }
+      }
     });
   }
 

@@ -1,11 +1,11 @@
 <div id="daymenu">
     <div class="daymenu">
         <div class="food-group">
-            <p class="title">Primeros</p>
+            <p class="title">{{'primeros' | translating}}</p>
             <div class="dishes" [innerHTML]="menu.firsts | safe:'html'"></div>
         </div>
         <div class="food-group">
-            <p class="title">Segundos</p>
+            <p class="title">{{'segundos' | translating}}</p>
             <div class="dishes" [innerHTML]="menu.seconds | safe:'html'"></div>
         </div>
         <div class="acclaration">{{menu.acclaration}}</div>
