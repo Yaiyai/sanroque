@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { AppService } from './communication/services/app/app.service';
 import { ApiCompanyService } from './communication/api-company.service';
 import { Meta } from '@angular/platform-browser';
+import { TranslateService } from '@ngx-translate/core';
+import { isPlatformBrowser } from '@angular/common';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -15,7 +17,12 @@ export class AppComponent {
     public appService: AppService,
     private apiCompanyService: ApiCompanyService,
     private meta: Meta,
+    public translate: TranslateService,
+    @Inject(PLATFORM_ID) private platformId: Object,
   ) {
+    translate.addLangs(['es', 'en']);
+    translate.setDefaultLang('es');
+    translate.use('en');
     // this.meta.addTags([
     //   { name: 'description', content: 'Restaurante de comida tradicional y caza en Brañosera, Palencia.' },
     //   { name: 'author', content: 'https://mfi.es/' },
@@ -29,6 +36,11 @@ export class AppComponent {
 
   ngOnInit() {
     this.getCompany();
+
+  }
+
+  switchLanguage(lang: 'es' | 'en') {
+    this.translate.use(lang);
   }
 
   getCompany() {

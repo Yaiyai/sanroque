@@ -29,8 +29,8 @@ export class MenuComponent {
   ngOnInit() {
     window.scrollTo(0, 0);
     this.getCategories();
-    this.appService.broadcast('titleNav', 'Carta');
-    this.appService.broadcast('buttonNav', { label: 'Menú del día', link: '/menu-del-dia' });
+    this.appService.broadcast('titleNav', 'menu');
+    this.appService.broadcast('buttonNav', { label: 'daymenu', link: '/menu-del-dia' });
   }
 
   getCategories() {
