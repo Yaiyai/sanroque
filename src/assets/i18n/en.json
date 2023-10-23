@@ -5,11 +5,14 @@
     "contact": "Contact Us",
     "restaurant": "Restaurant",
     "design": "Design & Development:",
-    "all": "All",
+    "ver todos": "All",
     "entrantes": "Entrees",
     "mariscos": "Seafood",
     "pescados": "Fish",
     "carnes": "Meat",
     "postes": "Desserts",
-    "call": "Call Us"
+    "call": "Call Us",
+    "vinos blancos": "White Wines",
+    "vinos tintos": "Red Wines",
+    "cavas y champán": "Champagne"
 }

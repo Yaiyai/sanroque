@@ -59,8 +59,6 @@ export class MenuComponent {
         } else {
           this.all = this.all.filter(elm => elm.category !== 'Cavas' && elm.category !== 'Vinos Tintos' && elm.category !== 'Vinos Blancos' && elm.category !== 'Vinos');
         }
-        console.log(res.dishes);
-        console.log(this.all);
         this.filtered = this.dishes;
       },
       error: err => console.error(err)

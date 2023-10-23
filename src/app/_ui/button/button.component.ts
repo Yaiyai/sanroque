@@ -14,6 +14,6 @@ export class ButtonComponent {
   constructor() { }
 
   ngOnInit() {
-
+    this.label = this.label.toLowerCase();
   }
 }

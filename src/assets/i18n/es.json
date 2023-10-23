@@ -5,11 +5,14 @@
     "contact": "Contacto",
     "restaurant": "Restaurante",
     "design": "Diseño y desarrollo:",
-    "all": "Ver todos",
+    "ver todos": "Ver todos",
     "entrantes": "Entrantes",
     "mariscos": "Mariscos",
     "pescados": "Pescados",
     "carnes": "Carnes",
     "postes": "Postres",
-    "call": "Llamar"
+    "call": "Llamar",
+    "vinos blancos": "Vinos blancos",
+    "vinos tintos": "Vinos tintos",
+    "cavas y champán": "cavas y champán"
 }
