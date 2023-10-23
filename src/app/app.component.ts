@@ -22,7 +22,7 @@ export class AppComponent {
   ) {
     translate.addLangs(['es', 'en']);
     translate.setDefaultLang('es');
-    translate.use('en');
+    translate.use('es');
     // this.meta.addTags([
     //   { name: 'description', content: 'Restaurante de comida tradicional y caza en Brañosera, Palencia.' },
     //   { name: 'author', content: 'https://mfi.es/' },
@@ -37,10 +37,6 @@ export class AppComponent {
   ngOnInit() {
     this.getCompany();
 
-  }
-
-  switchLanguage(lang: 'es' | 'en') {
-    this.translate.use(lang);
   }
 
   getCompany() {

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { firstValueFrom } from 'rxjs';
 import { ApiMenuService } from 'src/app/communication/api-menu.service';
 import { AppService } from 'src/app/communication/services/app/app.service';
 import { Dish } from 'src/app/models/dish.model';

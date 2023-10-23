@@ -1,6 +1,10 @@
 <div class="home">
     <div class="brand">
         <h1>{{'restaurant' | translating}}</h1>
+        <div class="buttons">
+            <app-button label="🇪🇸" class="link" (click)="switchLanguage('es')"></app-button>
+            <app-button label="🇬🇧" class="link" (click)="switchLanguage('en')"></app-button>
+        </div>
         <figure>
             <img src="https://res.cloudinary.com/sanroque/image/upload/v1652708739/web/u9u674cdbbxew8nbrcyd.svg" alt="San Roque Logo">
         </figure>
