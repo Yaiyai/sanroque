@@ -4,6 +4,7 @@ export class Dish {
     category: string = '';
     description: string = '';
     dish: string = '';
+    language: string = 'ES';
     price: number = 0;
     _id: string = '';
 }
