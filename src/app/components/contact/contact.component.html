@@ -4,7 +4,7 @@
             <i class="fa-solid fa-chevron-left"></i>
         </div>
         <div class="text">
-            <h1>Restaurante</h1>
+            <h1>{{'restaurant' | translating}}</h1>
             <h2>San</h2>
             <h2>Roque</h2>
             <div *ngIf="company" class="info">
@@ -46,8 +46,8 @@
             </figure>
         </div>
         <div class="buttons">
-            <app-button label="Llamar" class="white" [link]="'tel:'+ company?.phone" [isLink]="true"></app-button>
-            <small>Diseño y desarrollo:</small>
+            <app-button label="call" class="white" [link]="'tel:'+ company?.phone" [isLink]="true"></app-button>
+            <small>{{'design'| translating}}</small>
             <small>MFi, S.L.</small>
         </div>
     </div>
