@@ -6,6 +6,17 @@
   display: block;
   text-decoration: none;
 
+  &.link {
+    text-decoration: none;
+    text-align: center;
+    margin-top: 12px;
+    display: block;
+    span {
+      color: var(--main);
+      font-size: 12px;
+      line-height: 19px;
+    }
+  }
   &.main {
     background-color: var(--main);
     border: none;

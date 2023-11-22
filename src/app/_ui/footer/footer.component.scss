@@ -16,4 +16,10 @@ footer {
     margin-top: 12px;
     display: block;
   }
+  .legal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
 }

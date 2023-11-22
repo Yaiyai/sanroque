@@ -7,6 +7,7 @@ const routes: Routes = [
   { path: 'vinos', loadChildren: () => import('./components/menu/menu.module').then(m => m.MenuModule) },
   { path: 'menu-del-dia', loadChildren: () => import('./components/daymenu/daymenu.module').then(m => m.DaymenuModule) },
   { path: 'contacto', loadChildren: () => import('./components/contact/contact.module').then(m => m.ContactModule) },
+  { path: 'politica', loadChildren: () => import('./components/politica/politica.module').then(m => m.PoliticaModule) },
 ];
 
 @NgModule({

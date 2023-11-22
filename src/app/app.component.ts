@@ -3,7 +3,6 @@ import { AppService } from './communication/services/app/app.service';
 import { ApiCompanyService } from './communication/api-company.service';
 import { Meta } from '@angular/platform-browser';
 import { TranslateService } from '@ngx-translate/core';
-import { isPlatformBrowser } from '@angular/common';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -23,15 +22,6 @@ export class AppComponent {
     translate.addLangs(['es', 'en']);
     translate.setDefaultLang('es');
     translate.use('es');
-    // this.meta.addTags([
-    //   { name: 'description', content: 'Restaurante de comida tradicional y caza en Brañosera, Palencia.' },
-    //   { name: 'author', content: 'https://mfi.es/' },
-    //   { name: 'keywords', content: 'Brañosera, Restaurante, 824, Jandrin, Caza, Menú del dia, Menu, Dia, Banquetes, Montaña palentina, Comer bien, Palencia, Primer Fuero de España, Branosera, Espana, España' },
-    //   { name: 'twitter:card', content: 'summary_large_image' },
-    //   { name: 'twitter:url', content: 'https://www.sanroquebranosera.es/' },
-    //   { name: 'twitter:title', content: 'Restaurante San Roque || Brañosera' },
-    //   { name: 'twitter:description', content: 'Restaurante de comida tradicional y caza' },
-    // ]);
   }
 
   ngOnInit() {
