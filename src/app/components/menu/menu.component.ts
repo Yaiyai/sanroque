@@ -37,9 +37,9 @@ export class MenuComponent {
       next: company => {
         this.categories = company.company[0].categories;
         if (this.router.url === '/vinos') {
-          this.categories = this.categories.filter(elm => elm.name === 'Cavas' || elm.name === 'Vinos Tintos' || elm.name === 'Vinos Blancos');
+          this.categories = this.categories.filter(elm => elm.name.includes('cava') || elm.name.includes('vino'));
         } else {
-          this.categories = this.categories.filter(elm => elm.name !== 'Cavas' && elm.name !== 'Vinos Tintos' && elm.name !== 'Vinos Blancos');
+          this.categories = this.categories.filter(elm => !elm.name.includes('cava') && !elm.name.includes('vino'));
         }
         this.categories.unshift({ order: 0, name: 'Ver todos' });
         this.getAllDishes();
