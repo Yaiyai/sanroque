@@ -37,9 +37,9 @@ export class MenuComponent {
       next: company => {
         this.categories = company.company[0].categories;
         if (this.router.url === '/vinos') {
-          this.categories = this.categories.filter(elm => elm.name.includes('cava') || elm.name.includes('inos'));
+          this.categories = this.categories.filter(elm => elm.name.includes('ava') || elm.name.includes('inos'));
         } else {
-          this.categories = this.categories.filter(elm => !elm.name.includes('cava') && !elm.name.includes('inos'));
+          this.categories = this.categories.filter(elm => !elm.name.includes('ava') && !elm.name.includes('inos'));
         }
         this.categories.unshift({ order: 0, name: 'Ver todos' });
         this.getAllDishes();
@@ -54,9 +54,9 @@ export class MenuComponent {
       next: res => {
         this.all = res.dishes;
         if (this.router.url === '/vinos') {
-          this.all = this.all.filter(elm => elm.category.includes('cava') || elm.category.includes('inos'));
+          this.all = this.all.filter(elm => elm.category.includes('ava') || elm.category.includes('inos'));
         } else {
-          this.all = this.all.filter(elm => !elm.category.includes('cava') && !elm.category.includes('inos'));
+          this.all = this.all.filter(elm => !elm.category.includes('ava') && !elm.category.includes('inos'));
         }
         this.filtered = this.dishes;
       },
