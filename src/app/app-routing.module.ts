@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: 'menu-del-dia', loadChildren: () => import('./components/daymenu/daymenu.module').then(m => m.DaymenuModule) },
   { path: 'contacto', loadChildren: () => import('./components/contact/contact.module').then(m => m.ContactModule) },
   { path: 'politica', loadChildren: () => import('./components/politica/politica.module').then(m => m.PoliticaModule) },
+  { path: 'subvenciones', loadChildren: () => import('./components/subvenciones/subvenciones.module').then(m => m.SubvencionesModule) },
 ];
 
 @NgModule({

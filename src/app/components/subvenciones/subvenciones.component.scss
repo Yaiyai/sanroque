@@ -1,0 +1,21 @@
+figure {
+  display: block;
+  @media (min-width: 992px) {
+    height: 100%;
+    max-width: calc((100% / 2) - (24px * (2 - 1) / 2));
+    min-width: calc((100% / 2) - (24px * (2 - 1) / 2));
+  }
+  @media (max-width: 991px) {
+    max-width: 100%;
+    min-width: 100%;
+    margin-bottom: 0;
+  }
+  img {
+    width: 100%;
+  }
+}
+.main-container {
+  padding: 150px 0 72px;
+  margin: 0 auto;
+  width: 80dvw;
+}
